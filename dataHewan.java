@@ -10,13 +10,11 @@ public class dataHewan {
         }
     }
     public void tampilkanData(){
-        for(int i=0; i<idx-1; i++){
+        for(int i=0; i<=idx-1; i++){
             if(idx==0){
                 System.out.println("Data hewan belum dimasukkan");
             }else{
-                for (int j = 0; j < idx-1; j++) {
                     hewans[i].tampil();
-                }
             }
         }
     }
