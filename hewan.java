@@ -13,4 +13,10 @@ public class hewan{
         this.jenis=jenis;
         this.umur=umur;
     }
+    void tampil(){
+        System.out.println("ID      : "+id);
+        System.out.println("Nama    : "+nama);
+        System.out.println("Jenis   : "+jenis);
+        System.out.println("umur    : "+umur);
+    }
 }
