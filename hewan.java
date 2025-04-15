@@ -18,5 +18,6 @@ public class hewan{
         System.out.println("Nama    : "+nama);
         System.out.println("Jenis   : "+jenis);
         System.out.println("umur    : "+umur);
+        System.out.println("--------------------");
     }
 }
