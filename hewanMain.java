@@ -4,6 +4,7 @@ public class hewanMain {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         dataHewan list=new dataHewan();
+        int idx=0;
         do{
             System.out.println(" === MENU === ");
             System.out.println("1. Tambah data hewan");
@@ -28,7 +29,7 @@ public class hewanMain {
                     System.out.print("Umur    : ");
                     int umur=sc.nextInt();
                     sc.nextLine();
-                    list.TambahData(new hewan(id, nama, jenis, umur));
+                    idx=list.TambahData(new hewan(id, nama, jenis, umur));
                     System.out.print("Tamabah hewan lagi? (y/n) : ");
                     jawab=sc.nextLine();
                     }while (jawab.equalsIgnoreCase("y"));
@@ -38,8 +39,15 @@ public class hewanMain {
                     list.tampilkanData();
                     break;
                 case 3:
+                    System.out.println("\n === URUTKAN DATA HEWAN === ");
+                    list.Sorting();
+                    list.tampilkanData();
                     break;
                 case 4:
+                    System.out.println("\n === SEARCH DATA HEWAN === ");
+                    System.out.print("Masukkan key: ");
+                    String key=sc.nextLine();
+                    list.searchingData(key, 0, idx);
                     break;
                 case 5:
                     System.out.println("Terima kasih telah menggunakan aplikasi");
